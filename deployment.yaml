@@ -17,6 +17,9 @@ spec:
         image: votingappdemo.azurecr.io/app-image:v1
         ports:
         - containerPort: 80
+        env:
+        - name: REDIS
+          value: redis
 ---
 apiVersion: v1
 kind: Service
